@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Vitamin</title>
+</head>
+<body class="bg-gray-100 font-sans text-black text-center">
+    <div class="flex flex-col mt-4 mb-4 px-6 justify-center">
+        <p class="min320:text-xl min410:text-2xl md:text-4xl mb-3 text-center font-bold">Zat Makanan Mikro</p>
+        <p class="min320:text-lg min410:text-xl md:text-3xl text-center font-bold">Vitamin</p>
+    </div>
+    <div class="flex flex-col justify-center text-justify mt-4 px-8 md:px-24">
+        <p class="min320:text-md min410:text-lg md:tex-lg text-align mb-4">
+            Vitamin adalah zat organik yang diperlukan oleh tubuh dalam jumlah sedikit. Meskipun diperlukan dalam jumlah sedikit, 
+            vitamin memiliki peran sangat penting bagi tubuh seperti untuk kesehatan mata dan tulang. Semua jenis vitamin dapat dibagi menjadi dua golongan besar, 
+            yaitu vitamin yang larut dalam air (vitamin B dan C) dan vitamin yang larut dalam lemak (vitamin A, D, E, dan K).
+        </p>
+        <div class="min320:mt-4 mb-5 flex justify-center text-justify">
+            <img src="../Images/Materi/3 Zat Makanan/Tabel Macam-macam Vitamin.jpg" width="60%" height="60%" onclick="openModal('../Images/Materi/3 Zat Makanan/Tabel Macam-macam Vitamin.jpg')">
+        </div>
+        <div id="imageModal" class="fixed inset-0 hidden bg-black bg-opacity-50 flex items-center justify-center">
+            <div class="relative flex items-center justify-end w-full sm:w-auto">
+                <img id="modalImage" src="" class="max-w-full max-h-screen rounded-lg shadow-lg">
+                <button class="absolute top-2 right-2 bg-white px-3 py-1 rounded-full text-black text-lg font-bold" onclick="closeModal()">×</button>
+            </div>
+        </div>
+        <p class="min320:text-sm md:tex-lg font-semibold text-center">
+            Tabel Macam-macam Vitamin
+        </p>
+        <p class="min320:text-sm text-center mb-6 md:tex-lg">
+            (Sumber: Icih Tresnaasih, 2020)
+        </p>
+    </div>
+</body>
+</html>
