@@ -97,9 +97,86 @@ function closeModal() {
 
 // dummy json
 const materiData = [
-    { "judul": "Pre-test Kognitif", "file": "test_kognitif.html", 
-        "konten": "Sebelum memulai pembelajaran, setiap peserta didik diwajibkan untuk mengisi pre-test hasil belajar ranah kognitif terlebih dahulu melalui link dibawah ini Pre-Test Hasil Belajar Ranah Kognitif Jawab soal secara mandiri sesuai dengan kemampuan saudara tanpa diskusi dengan teman ataupun meminta bantuan melalui google"},
-    { "judul": "Pre-test Kreatif", "file": "test_kreatif.html", "konten": "Sebelum memulai pembelajaran, setiap peserta didik diwajibkan untuk mengisi pre-test berpikir kreatif terlebih dahulu melalui link dibawah ini Pre-Test Berpikir Kreatif Jawab soal secara mandiri sesuai dengan kemampuan saudara tanpa diskusi dengan teman ataupun meminta bantuan melalui google" },
+    {
+        "judul": "Pendahuluan",
+        "file": "Pendahuluan.html",
+        "keywords": ["kebutuhan gizi", "gangguan pencernaan", "proses pencernaan", "sumber energi", "organ pencernaan"]
+      },
+      {
+        "judul": "Pengertian Sistem Pencernaan",
+        "file": "Pengertian_Sistem_Pencernaan.html",
+        "keywords": ["sistem organ", "enzim", "hormon", "kerongkongan", "lambung", "usus halus", "hati", "pankreas", "empedu"]
+      },
+      {
+        "judul": "Zat Makanan",
+        "file": "Zat_Makanan.html",
+        "keywords": ["zat makanan makro", "zat makanan mikro"]
+      },
+      {
+        "judul": "Karbohidrat",
+        "file": "Karbohidrat.html",
+        "keywords": ["monosakarida", "disakarida", "polisakarida", "glukosa", "fruktosa", "pati", "glikogen", "Zat Makanan Makro"]
+      },
+      {
+        "judul": "Protein",
+        "file": "Protein.html",
+        "keywords": ["asam amino", "protein hewani", "protein nabati", "struktur protein", "enzim protein", "Zat Makanan Makro"]
+      },
+      {
+        "judul": "Lemak",
+        "file": "Lemak.html",
+        "keywords": ["asam lemak jenuh", "asam lemak tak jenuh", "trigliserida", "kolesterol", "lipid", "Zat Makanan Makro"]
+      },
+      {
+        "judul": "Vitamin",
+        "file": "Vitamin.html",
+        "keywords": ["vitamin A", "vitamin B", "vitamin C", "vitamin D", "vitamin E", "vitamin K", "Zat Makanan Mikro"]
+      },
+      {
+        "judul": "Mineral",
+        "file": "Mineral.html",
+        "keywords": ["kalsium", "zat besi", "fosfor", "kalium", "magnesium", "seng", "Zat Makanan Mikro"]
+      },
+      {
+        "judul": "Saluran Pencernaan",
+        "file": "Saluran_Pencernaan.html",
+        "keywords": ["mulut", "gigi", "lidah", "kerongkongan", "lambung", "usus halus", "usus besar", "anus"]
+      },
+      {
+        "judul": "Proses Pencernaan Makanan",
+        "file": "Proses_Pencernaan.html",
+        "keywords": ["pencernaan mekanik", "pencernaan kimiawi", "enzim", "amylase", "pepsin", "lipase"]
+      },
+      {
+        "judul": "Gangguan Pencernaan",
+        "file": "Gangguan.html",
+        "keywords": ["gizi buruk", "diare", "maag", "gondok", "sariawan"]
+      },
+      {
+        "judul": "Gizi Buruk",
+        "file": "Gangguan1.html",
+        "keywords": ["kwashiorkor", "marasmus", "kekurangan nutrisi", "berat badan rendah"]
+      },
+      {
+        "judul": "Diare",
+        "file": "Gangguan2.html",
+        "keywords": ["dehidrasi", "infeksi", "buang air besar cair", "gangguan pencernaan"]
+      },
+      {
+        "judul": "Maag",
+        "file": "Gangguan3.html",
+        "keywords": ["gastritis", "asam lambung", "nyeri ulu hati", "mual"]
+      },
+      {
+        "judul": "Gondok",
+        "file": "Gangguan4.html",
+        "keywords": ["pembesaran kelenjar tiroid", "kekurangan yodium", "gangguan hormon"]
+      },
+      {
+        "judul": "Sariawan",
+        "file": "Gangguan5.html",
+        "keywords": ["luka mulut", "infeksi", "nyeri saat makan", "kekurangan vitamin C"]
+      }
 ];
 
 
@@ -112,7 +189,6 @@ searchIcon.addEventListener('click', () => {
     let isOpenSearchbar = false;
 
     isOpenSearchbar = !isOpenSearchbar;
-    // searchbar.style.width = `${container.offsetWidth}px`;
     searchbar.classList.toggle('hidden');
     results.classList.add('hidden');
     inputElement.value = '';
@@ -133,7 +209,7 @@ function searchMateri() {
 
     const filtered = materiData.filter(materi => 
         materi.judul.toLowerCase().includes(input) ||
-        materi.konten.toLowerCase().includes(input)
+        (materi.keywords && materi.keywords.some(keyword => keyword.toLowerCase().includes(input)))
     );
 
     filtered.forEach(materi => {
