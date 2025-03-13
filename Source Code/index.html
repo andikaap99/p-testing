@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Login Page</title>
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100">
+
+    <div class="bg-gray-600 p-8 rounded-lg shadow-lg w-80">
+        <h2 class="text-2xl font-bold text-center mb-6">Login</h2>
+        <input id="username" type="text" placeholder="Nama" class="w-full p-2 mb-4 border rounded-lg">
+        <input id="password" type="password" placeholder="Kode Akses" class="w-full p-2 mb-4 border rounded-lg">
+        <button onclick="login()" class="w-full bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600">Login</button>
+        <p id="error" class="text-red-500 text-center mt-4 hidden">Kode akses salah!</p>
+    </div>
+
+    <script>
+        const correctPassword = "biologi";
+
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const error = document.getElementById('error');
+
+            if (password === correctPassword) {
+                alert(`Selamat datang, ${username}!`);
+                localStorage.setItem('isLoggedIn', 'true'); // Simpan status login
+                window.location.href = 'menu_utama.html';
+            } else {
+                error.classList.remove('hidden');
+            }
+        }
+
+        // Cek apakah user sudah login
+        window.onload = function() {
+            if (localStorage.getItem('isLoggedIn') === 'true') {
+                window.location.href = 'menu_utama2.html';
+            }
+        };
+    </script>
+</body>
+</html>
