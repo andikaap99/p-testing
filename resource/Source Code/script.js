@@ -85,13 +85,42 @@ function loadContent(page) {
 
 
 // function untuk zoom gambar
-function openModal(imageSrc) {
-    document.getElementById('modalImage').src = imageSrc;
-    document.getElementById('imageModal').classList.remove('hidden');
+function openModal(imageSrc, scale = 1, type = 'tinggi') {
+  const modalImage = document.getElementById('modalImage');
+
+  // Cek ukuran layar
+  if ((window.innerWidth >= 320 && window.innerWidth < 360) && type == 'tinggi') {
+    scale = scale - 0.4;
+  } else if ((window.innerWidth >= 320 && window.innerWidth < 360) && type == 'lebar') {
+    scale = scale - 0.8;
+  } else if ((window.innerWidth >= 360 && window.innerWidth < 410) && type == 'tinggi') {
+    scale = scale - 0.2;
+  } else if ((window.innerWidth >= 360 && window.innerWidth < 410) && type == 'lebar') {
+    scale = scale - 0.7;
+  } else if ((window.innerWidth >= 410 && window.innerWidth < 640) && type == 'tinggi') {
+    scale = scale - 0.1;
+  } else if ((window.innerWidth >= 410 && window.innerWidth < 640) && type == 'lebar') {
+    scale = scale - 0.6;
+  } else {
+    scale = scale + 0.2
+  }
+
+  modalImage.src = imageSrc;
+  modalImage.style.transform = `scale(${scale})`;
+  document.getElementById('imageModal').classList.remove('hidden');
 }
 
+function openModal2(imageSrc, scale = 10) {
+  const modalImage = document.getElementById('modalImage');
+
+  modalImage.src = imageSrc;
+  modalImage.style.transform = `scale(${scale})`;
+  document.getElementById('imageModal').classList.remove('hidden');
+}
+
+
 function closeModal() {
-    document.getElementById('imageModal').classList.add('hidden');
+  document.getElementById('imageModal').classList.add('hidden');
 }
 
 
