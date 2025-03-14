@@ -124,7 +124,7 @@ function closeModal() {
 }
 
 
-// dummy json
+
 const materiData = [
     {
         "judul": "Pendahuluan",
@@ -173,37 +173,37 @@ const materiData = [
       },
       {
         "judul": "Proses Pencernaan Makanan",
-        "file": "Proses_Pencernaan.html",
+        "file": "Proses_Pencernaan_Makanan.html",
         "keywords": ["pencernaan mekanik", "pencernaan kimiawi", "enzim", "amylase", "pepsin", "lipase"]
       },
       {
         "judul": "Gangguan Pencernaan",
-        "file": "Gangguan.html",
+        "file": "gangguan.html",
         "keywords": ["gizi buruk", "diare", "maag", "gondok", "sariawan"]
       },
       {
         "judul": "Gizi Buruk",
-        "file": "Gangguan1.html",
+        "file": "gangguan1.html",
         "keywords": ["kwashiorkor", "marasmus", "kekurangan nutrisi", "berat badan rendah"]
       },
       {
         "judul": "Diare",
-        "file": "Gangguan2.html",
+        "file": "gangguan2.html",
         "keywords": ["dehidrasi", "infeksi", "buang air besar cair", "gangguan pencernaan"]
       },
       {
         "judul": "Maag",
-        "file": "Gangguan3.html",
+        "file": "gangguan3.html",
         "keywords": ["gastritis", "asam lambung", "nyeri ulu hati", "mual"]
       },
       {
         "judul": "Gondok",
-        "file": "Gangguan4.html",
+        "file": "gangguan4.html",
         "keywords": ["pembesaran kelenjar tiroid", "kekurangan yodium", "gangguan hormon"]
       },
       {
         "judul": "Sariawan",
-        "file": "Gangguan5.html",
+        "file": "gangguan5.html",
         "keywords": ["luka mulut", "infeksi", "nyeri saat makan", "kekurangan vitamin C"]
       }
 ];
