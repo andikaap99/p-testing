@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Protein</title>
+</head>
+<body class="bg-gray-100 font-sans text-black text-center">
+    <div class="flex flex-col mt-4 mb-4 px-6 justify-center">
+        <p class="min320:text-xl min410:text-2xl md:text-4xl mb-3 text-center font-bold">Zat Makanan Makro</p>
+        <p class="min320:text-lg min410:text-xl md:text-3xl text-center font-bold">Protein</p>
+    </div>
+
+    <div class="flex flex-col justify-center text-justify mt-4 px-8 md:px-24">
+        <p class="min320:text-md min410:text-lg md:tex-lg text-align mb-2">
+            Protein adalah zat makanan yang mengandung unsur karbon (C), hidrogen (H), oksigen (O) dan nitrogen (N). 
+            Protein memiliki fungsi sebagai berikut:
+        </p>
+        <p class="min320:text-md min410:text-lg md:tex-lg text-align mb-2">
+            Protein adalah zat makanan yang mengandung unsur karbon (C), hidrogen (H), oksigen (O) dan nitrogen (N). 
+            Protein memiliki fungsi sebagai berikut:
+            <p class="mb-1">1. Sumber energi</p>
+            <p class="mb-1">2. Sebagai zat pembangun dalam tubuh</p>
+            <p class="mb-1">3. Berperan dalam sintesis zat-zat penting tubuh seperti hormon dan enzim</p>
+            <p class="mb-1">4. Perbaikan dan pemeliharaan jaringan tubuh</p>
+        </p>
+        <p class="min320:text-md min410:text-lg md:tex-lg text-align mb-2">
+            Sebelum diserap oleh tubuh, protein harus diubah dahulu menjadi asam amino. Asam amino dibagi menjadi dua macam yaitu asam amino esensial dan asam amino nonesensial. 
+            Asam amino esensial adalah asam amino yang tidak dapat disintesis atau dibentuk oleh tubuh, jadi diperoleh melalui makanan. 
+            Sedangkan asam amino nonesensial yaitu asam amino yang dapat disintesis oleh tubuh.
+        </p>    
+        <p class="min320:text-md min410:text-lg md:tex-lg text-align mb-2">
+            Bahan makanan yang banyak mengandung protein dapat digolongkan menjadi dua macam yaitu protein hewani dan protein nabati. 
+            Protein hewani adalah protein yang diperoleh dari hewan, seperti daging, telur, dan ikan. 
+            Adapun protein nabati adalah protein yang diperoleh dari tumbuhan seperti kacang-kacangan.
+        </p>
+    
+        <div class="min320:mt-4 mb-5 flex justify-center text-justify">
+            <img src="../Images/Materi/3 Zat Makanan/Protein.jpg" class="w-auto h-1/2" onclick="openModal('../Images/Materi/3 Zat Makanan/Protein.jpg', 1.8, 'lebar')">
+        </div>
+        <div id="imageModal" class="fixed inset-0 hidden bg-black bg-opacity-50 flex items-center justify-center z-50 overflow-y-auto" onclick="closeModal()">
+            <div class="relative" onclick="event.stopPropagation()">
+                <img id="modalImage" src="" class="max-w-xs max-h-80 rounded-lg shadow-lg object-contain">
+            </div>
+        </div>
+        <p class="min320:text-sm md:tex-lg font-semibold text-center">
+            Gambar Makanan yang Mengandung Protein
+        </p>
+        <p class="min320:text-sm text-center mb-6 md:tex-lg">
+            (Sumber: Rozikin, 2018)
+        </p>
+    </div>
+</body>
+</html>
