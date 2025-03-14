@@ -1,7 +1,7 @@
 // function untuk logout
 function logout() {
     localStorage.removeItem('isLoggedIn');
-    window.location.href = '../index.html';
+    window.location.href = 'index.html';
 }
 
 
